@@ -1,0 +1,22 @@
+.beers{
+    display:flex;
+    flex-direction:column;
+    width:60%;
+    margin: 20px auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgcontainer{
+    width:100%;
+}
+
+.imgcontainer img{
+    height: 30vh;
+    width:auto;
+    margin: 0 auto;
+}
+
+h2, p{
+    align-self: flex-start;
+}

@@ -1,9 +1,9 @@
 import React from 'react';
-import './RandomBeer.css';
+import './BeerDetail.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default class RandomBeer extends React.Component {
+export default class BeerDetail extends React.Component {
 
     constructor() {
         super();
@@ -20,8 +20,10 @@ export default class RandomBeer extends React.Component {
     }
 
     getSingleBeer = () => {
-        
-        axios.get(`https://ironbeer-api.herokuapp.com/beers/random`)
+        console.log(this.props.match.params);
+        const {params} = this.props.match;
+        console.log(params);
+        axios.get(`https://ironbeer-api.herokuapp.com/beers/single/${params.id}`)
             .then((singleBeer) => {
                 console.log(singleBeer.data);
                 this.setState({ ...this.state, beer: singleBeer.data })
@@ -48,7 +50,7 @@ export default class RandomBeer extends React.Component {
         } else {
 
 
-        let theBeer = this.state.beer[0];
+        let theBeer = this.state.beer;
         
 
         return (
