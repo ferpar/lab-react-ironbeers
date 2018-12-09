@@ -54,7 +54,7 @@ export default class BeerDetail extends React.Component {
         
 
         return (
-            <div className="beers">
+            <div className="beer-detail">
                 <nav className="nav justify-content-center"><Link to='/'><img src="/images/Home.jpg" alt="home" /></Link></nav>
                 <div className="img-container">
                 <img src={theBeer.image_url} alt="beer-img"/>

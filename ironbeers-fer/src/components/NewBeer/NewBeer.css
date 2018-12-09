@@ -1,0 +1,8 @@
+.new-beer-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width:60%;
+    margin:0 auto;
+}
